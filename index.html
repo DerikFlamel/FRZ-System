@@ -295,8 +295,18 @@
       async function sendToGetform(allData) {
         const fd = new FormData();
         fd.append('submissionId', allData.cycleId);
-        for (const [k, v] of Object.entries(allData.inicio || {})) { if (typeof v !== 'object') fd.append(`[Início] ${k}`, String(v)); }
-        for (const [k, v] of Object.entries(allData.fim || {})) { if (typeof v !== 'object') fd.append(`[Fim] ${k}`, String(v)); }
+        for (const [k, v] of Object.entries(allData.inicio || {})) {
+  if (typeof v !== 'object') {
+    const key = 'inicio_' + k.toLowerCase().replace(/\s+/g, '_').replace(/[^\w_]/g, '');
+    fd.append(key, String(v));
+  }
+}
+        for (const [k, v] of Object.entries(allData.fim || {})) {
+  if (typeof v !== 'object') {
+    const key = 'fim_' + k.toLowerCase().replace(/\s+/g, '_').replace(/[^\w_]/g, '');
+    fd.append(key, String(v));
+  }
+}
         ['inicio', 'fim'].forEach(stage => {
           const loc = allData[stage]?.location; const addr = allData[stage]?.address;
           if (loc) {
