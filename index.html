@@ -308,17 +308,20 @@
   }
 }
         ['inicio', 'fim'].forEach(stage => {
-          const loc = allData[stage]?.location; const addr = allData[stage]?.address;
-          if (loc) {
-            fd.append(`[${stage}] Latitude`, String(loc.lat));
-            fd.append(`[${stage}] Longitude`, String(loc.lon));
-            if (addr) {
-              fd.append(`[${stage}] Cidade`, addr.city || addr.town || addr.village || '');
-              fd.append(`[${stage}] UF`, addr.state || '');
-              fd.append(`[${stage}] CEP`, addr.postcode || '');
-            }
-          }
-        });
+  const loc = allData[stage]?.location;
+  const addr = allData[stage]?.address;
+  if (loc) {
+    fd.append(`${stage}_latitude`, String(loc.lat));
+    fd.append(`${stage}_longitude`, String(loc.lon));
+    fd.append(`${stage}_accuracy`, String(loc.accuracy || ''));
+    if (addr) {
+      fd.append(`${stage}_cidade`, addr.city || addr.town || addr.village || '');
+      fd.append(`${stage}_uf`, addr.state || '');
+      fd.append(`${stage}_cep`, addr.postcode || '');
+    }
+  }
+});
+
         const inicioPhoto = await getPhoto(`${allData.cycleId}_inicio_photo`);
         const fimPhoto = await getPhoto(`${allData.cycleId}_fim_photo`);
         if (inicioPhoto) fd.append('Foto do Odômetro (Início)', new File([inicioPhoto], `inicio_${allData.cycleId}.jpg`, { type: 'image/jpeg' }));
