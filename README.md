@@ -1,5 +1,4 @@
-# FRZ-iOS
-# ▶️ YouTube Homepage Clone
+# 🌏 Geolocation collector
 
 A clean and responsive **YouTube homepage** built with **HTML5** and **CSS3**.  
 This project is part of my front-end development learning journey and showcases my skills in **structuring layouts**,and **styling with CSS**.
