@@ -8,7 +8,7 @@
     function openDB() {
       return new Promise((resolve, reject) => {
         const req = indexedDB.open(DB_NAME, 1);
-        eq.onupgradeneeded = (e) => {
+        req.onupgradeneeded = (e) => {
           const db = e.target.result;
           if (!db.objectStoreNames.contains('photos')) {
             db.createObjectStore('photos', { keyPath: 'id' });
