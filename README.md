@@ -12,10 +12,7 @@ The system works as a lightweight web application where users have to answer two
 
 ## 🖼️ Preview
 
-![Project Screenshot](./Pictures/Home_Page.jpeg)
-![Project Screenshot](./Pictures/Firs_Form.jpeg)
-![Project Screenshot](./Pictures/Middle_Page.jpeg)
-![Project Screenshot](./Pictures/Last_Form.jpeg)
+![Project Screenshot](./Pictures/First_Form.jpeg)
 
 ---
 
