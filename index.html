@@ -1,75 +1,97 @@
 <!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>FRZ</title>
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-  <link rel="stylesheet" href="header.css">
-</head>
-<body>
-  <!-- HOME -->
-  <section id="home" class="screen active">
-    <div class="banner">FRZ</div>
-    <div class="container">
-      <div class="center-col">
-        <button class="btn" id="btnStart" aria-label="Ir para Início">Início</button>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>
+      FRZ
+    </title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <link rel="stylesheet" 
+    href="header.css">
+  </head>
+  <body>
+    <!-- ホームページ -->
+    <section id="home" class="screen active">
+      <div class="banner">
+        FRZ
       </div>
-    </div>
-    <div class="footer">KIT 0.01.011</div>
-  </section>
+      <div class="container">
+      <div class="center-col">
+      <button class="btn" id="btnStart" aria-label="Ir para Início">
+        Início
+      </button>
+      </div>
+      </div>
+      <div class="footer">
+        KIT 1.01.001
+      </div>
+    </section>
 
-  <!-- INÍCIO -->
-  <section id="inicio" class="screen">
-    <div class="banner">FRZ</div>
-    <div class="container">
+    <!-- 最初のページ -->
+    <section id="inicio" class="screen">
+      <div class="banner">
+        FRZ
+      </div>
+      <div class="container">
       <div id="inicio-fields"></div>
-
       <div class="field">
-        <label>Foto do Odômetro</label>
-        <div class="camera-area">
-          <input id="inicio-photo" type="file" accept="image/*" capture="environment" />
-          <img id="inicio-preview" class="preview hidden" alt="Prévia da foto de início" />
-          <div id="inicio-loc" class="status"></div>
-        </div>
+      <label>
+        Foto do Odômetro
+      </label>
+      <div class="camera-area">
+      <input id="inicio-photo" type="file" accept="image/*" capture="environment" />
+      <img id="inicio-preview" class="preview hidden" alt="Prévia da foto de início" />
+      <div id="inicio-loc" class="status"></div>
       </div>
+      </div>
+      <button id="inicio-send" class="btn hidden" disabled>
+        Enviar
+      </button>
+      </div>
+    </section>
 
-      <button id="inicio-send" class="btn hidden" disabled>Enviar</button>
-    </div>
-    <div class="footer">KIT 0.01.011</div>
-  </section>
-
-  <!-- MIDDLE -->
-  <section id="middle" class="screen">
-    <div class="banner">FRZ</div>
-    <div class="container">
+    <!-- 真ん中 -->
+    <section id="middle" class="screen">
+      <div class="banner">
+        FRZ
+      </div>
+      <div class="container">
       <div class="center-col">
-        <button class="btn" id="btnFim" aria-label="Ir para Fim">Fim</button>
+      <button class="btn" id="btnFim" aria-label="Ir para Fim">
+        Fim
+      </button>
       </div>
-    </div>
-    <div class="footer">KIT 0.01.011</div>
-  </section>
+      </div>
+      <div class="footer">
+        KIT 1.01.001
+      </div>
+    </section>
 
-  <!-- FIM -->
-  <section id="fim" class="screen">
-    <div class="banner">FRZ</div>
-    <div class="container">
+    <!-- 最後のページ -->
+    <section id="fim" class="screen">
+      <div class="banner">
+        FRZ
+      </div>
+      <div class="container">
       <div id="fim-fields"></div>
-
       <div class="field">
-        <label>Foto do Odômetro</label>
-        <div class="camera-area">
-          <input id="fim-photo" type="file" accept="image/*" capture="environment" />
-          <img id="fim-preview" class="preview hidden" alt="Prévia da foto do fim" />
-          <div id="fim-loc" class="status"></div>
-        </div>
+      <label>
+        Foto do Odômetro
+      </label>
+      <div class="camera-area">
+      <input id="fim-photo" type="file" accept="image/*" capture="environment" />
+      <img id="fim-preview" class="preview hidden" alt="Prévia da foto do fim" />
+      <div id="fim-loc" class="status"></div>
       </div>
+      </div>
+      <button id="fim-send" class="btn hidden" disabled>
+        Enviar
+      </button>
+      </div>
+      </section>
 
-      <button id="fim-send" class="btn hidden" disabled>Enviar</button>
-    </div>
-  </section>
-
-  <script src="main.js"></script
-</body>
+    <script src="main.js"></script
+  </body>
 </html>
