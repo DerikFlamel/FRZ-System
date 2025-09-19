@@ -1,61 +1,44 @@
 # 🌏 Geolocation collector
 
-A clean and responsive **YouTube homepage** built with **HTML5** and **CSS3**.  
-This project is part of my front-end development learning journey and showcases my skills in **structuring layouts**,and **styling with CSS**.
+In this project, I was commissioned by FRZ, a local company from São José dos Campos - São Paulo, Brazil, to develop a system to help them gain more precise control over their delivery service. The system replaces their manual process of transcribing physical forms into Google Sheets with an automated solution that sends all information online and formats it directly into their Google Sheet. It also provides more accurate tracking of driver locations and the kilometers they complete, reducing errors and lowering company costs.. 
 
 ---
 
 ## 📝 Project Overview
 
-This is a **static front-end recreation** of the YouTube homepage with no backend functionality. The main goal of this project was practice **HTML and CSS extensively**, focusing on mastering HTML syntax and exploring different styling and layout concepts in CSS. It also gave me the opportunity to develop my **UI** and **UX design** skills by studying the fundamentals that large and well-known websites use. 
-
-For the design, I combined elements from **both old and new YouTube layouts** to create something familiar yet unique.
-> ⚠️ This project is **desktop-only**
+The system works as a lightweight web application where users have to answer two forms. The first form collects key details: trip identification, license plate, quantity of deliveries and cities, the farthest city, and the odometer reading before departure. The driver also uploads a photo of the odometer, which automatically captures their location. The second form record trip completion data, including any returns, the final odometer reading, and another photo with geolocation. All data is instantly processed and sent to Google Sheets. 
 
 ---
 
 ## 🖼️ Preview
 
-![Project Screenshot](./thumbnails/Page_View.jpeg)
+![Project Screenshot](./Pictures/Home_Page.jpeg)
+![Project Screenshot](./Pictures/Firs_Form.jpeg)
+![Project Screenshot](./Pictures/Middle_Page.jpeg)
+![Project Screenshot](./Pictures/Last_Form.jpeg)
 
 ---
 
 ## 🖥️ Project Structure
 ```
-Youtube_Project/
-│── icons/ # Icons used across the page
-│── profile-pictures/ # Profile images for channel previews
-│── styles/ # CSS stylesheets
-│ ├── general.css # Global styles
-│ ├── header.css # Header section styles
-│ ├── sidebar.css # Sidebar styles
-│ └── video.css # Video grid & thumbnails styling
-│── thumbnails/ # Video thumbnails & Page_View screenshot
-│ └── Page_View.jpeg
-│── LICENSE # Project documentation
+FRZ-System/
+│── Pictures/ # Project view
 │── README.md # Project documentation
-│── youtube.html # Main HTML file
+│── header.css # CSS stylesheet
+│── index.html # Main HTML file
+│── main.js # JavaScript file with the main functions
 ```
 ---
 
 ## 🛠️ Built With
 
-- **HTML5** – Semantic structure and accessibility
-- **CSS3** – Styling, layout, and hover animations
-- **Flexbox/Grid** – Responsive alignment
-- **Google Fonts & Icons** – Clean, modern look
+- **Website** – JavaScript, HTML, CSS
+- **Data Base** – Getform
+- **Others** – Google Sheets
 
----
-
-## 📌 Learning Goals
-
-- Practice **HTML and CSS fundamentals**
-- Explore **layout design techniques**
-- Improve **UI feedback**
-  
 ---
 
 ## 🌐 Clone the repository
 ```bash
-git clone https://github.com/DerikFlamel/Youtube-Project.git
+git clone https://github.com/DerikFlamel/FRZ-System.git
 ```
